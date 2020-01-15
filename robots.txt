@@ -3,6 +3,6 @@ User-Agent: *
 Allow: /images
 Allow: /index.html
 Allow: /style.css
-Allow: /serviceworkers.js
+Allow: /serviceworker.js
 
 Sitemap: http://marijani.rg.gd/sitemap.xml
