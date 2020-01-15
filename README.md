@@ -1,2 +1,7 @@
-# marijani101.github.io
-Personal Homepage
+## marijani101.github.io
+
+Github repo for my personal website
+
+.. always in maintainace [marijani.rf.gd]
+
+peace!! ✌

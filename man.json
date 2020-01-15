@@ -1,0 +1,14 @@
+{
+    "name": "Marijani's Home Page",
+    "short_name": "Marijani Hussein",
+    "description": "Homepage for Marijani Hussein",
+    "dir": "ltr",
+    "lang": "en",
+    "theme_color": "#00000",
+    "background_color": "#000000",
+    "display": "browser",
+    "orientation": "potrait",
+    "start_url": "/index.html",
+    "categories": ["technology", "web","personal","homepage","research"]
+  }
+  
