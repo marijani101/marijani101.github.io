@@ -4,10 +4,10 @@
     "description": "Homepage for Marijani Hussein",
     "dir": "ltr",
     "lang": "en",
-    "theme_color": "#00000",
+    "theme_color": "#000000",
     "background_color": "#000000",
     "display": "browser",
-    "orientation": "potrait",
+    "orientation": "portrait",
     "start_url": "/index.html",
     "categories": ["technology", "web","personal","homepage","research"]
   }
