@@ -1,14 +1,26 @@
 {
     "name": "Marijani's Home Page",
-    "short_name": "Marijani Hussein",
+    "short_name": "Marijani",
     "description": "Homepage for Marijani Hussein",
     "dir": "ltr",
     "lang": "en",
     "theme_color": "#000000",
     "background_color": "#000000",
-    "display": "browser",
+    "display": "standalone",
     "orientation": "portrait",
     "start_url": "/index.html",
-    "categories": ["technology", "web","personal","homepage","research"]
+    "categories": ["technology", "web","personal","homepage","research"],
+    "icons": [
+      {
+        "src": "/images/android-chrome-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/android-chrome-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
   }
   
