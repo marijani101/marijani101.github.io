@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="manifest" href="man.json" />
 
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
     <style>
-        .body {
-            background: black;
-        }
+    .body{
+        background: black;
+    }
     </style>
+    
+<div class="flourish-embed" name="serious" id="3" data-src="visualisation/1251012" style="display: none"></div>
 
-    <div class="flourish-embed" name="serious" id="3" data-src="visualisation/1251012" style="display: none"></div>
+<div class="flourish-embed" name="serious" id="2" data-src="visualisation/1251395" style="display: none"></div> 
 
-    <div class="flourish-embed" name="serious" id="2" data-src="visualisation/1251395" style="display: none"></div>
+<div class="flourish-embed" name="serious" id="1" data-src="visualisation/1251931" ></div> 
+<script src="https://public.flourish.studio/resources/embed.js"></script>
 
-    <div class="flourish-embed" name="serious" id="1" data-src="visualisation/1251931"></div>
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
+<div>
+    <a href="index.html" style="float: left"> go back ></a>
+    <a href="#" style="float: right" class="onclikdosomething" onclick="myFunction()">another chart
+    <span class="js-random-emoji ">📬</span>
+    </a>
 
-    <div>
-        <a href="index.html" style="float: left"> go back ></a>
-        <a href="#" style="float: right" class="onclikdosomething" onclick="myFunction()">another chart
-            <span class="js-random-emoji ">📬</span>
-        </a>
+    <!-- <button onclick="myFunction()">Try it</button> -->
+    <!-- <button  class="clickMe" id = "clicker" onclick="changeviz()">test </button> -->
 
-        <script>
-            const emoji = ["☁️", "🆗", "👩🏻‍💻", "🎮", "🌵", "🌿", "📬"];
-            const randomEmoji = document.querySelector(".js-random-emoji");
-            if (randomEmoji) {
-                randomEmoji.textContent =
-                    emoji[Math.floor(Math.random() * emoji.length)];
-            }
-            var num = Math.floor(Math.random() * 3) + 1;
+    <script>
+    const emoji = ['☁️', '🆗', '👩🏻‍💻', '🎮', '🌵', '🌿', '📬']
+    const randomEmoji = document.querySelector('.js-random-emoji')
+    if (randomEmoji) {
+    randomEmoji.textContent = emoji[Math.floor(Math.random() * emoji.length)]
+    }
+         var num = Math.floor(Math.random() * 3) + 1  
+    
+        // randomvis = vizsrc[Math.floor(Math.random() * vizsrc.length)]
+        var strnum = num.toString()
+        // console.log(num)
+        var butvis = document.getElementById (strnum);
+        // butvis.style.display = 'none'
 
-            randomvis = vizsrc[Math.floor(Math.random() * vizsrc.length)];
-            var strnum = num.toString();
-            // console.log(num)
-            var butvis = document.getElementById(strnum);
-            // butvis.style.display = 'none'
+    function myFunction(){
+        num = Math.floor(Math.random() * 3) + 1  ;
+    
+        // randomvis = vizsrc[Math.floor(Math.random() * vizsrc.length)];
+        var strnum = num.toString();
+        console.log(num);
+        var tester = document.getElementsByName("serious");
+        console.log(tester);
+        for (x of tester){
+            x.style.display = 'none'
+        }
 
-            function myFunction() {
-                num = Math.floor(Math.random() * 3) + 1;
+        var butvis = document.getElementById (strnum);
+        butvis.style.display = 'block'
+        
+        console.log(butvis.getAttribute('data-src'))
+        butvis.setAttribute('data-src','visualisation/1251931')
+        console.log(butvis.getAttribute('data-src'))
+        // window.location.reload()
+        butvis.setAttribute('data-src','visualisation/1251931')
+    }
 
-                randomvis = vizsrc[Math.floor(Math.random() * vizsrc.length)];
-                var strnum = num.toString();
-                console.log(num);
-                var tester = document.getElementsByName("serious");
-                console.log(tester);
-                for (x of tester) {
-                    x.style.display = "none";
-                }
+    </script>
 
-                var butvis = document.getElementById(strnum);
-                butvis.style.display = "block";
 
-                console.log(butvis.getAttribute("data-src"));
-                butvis.setAttribute("data-src", "visualisation/1251931");
-                console.log(butvis.getAttribute("data-src"));
-                // window.location.reload()
-                butvis.setAttribute("data-src", "visualisation/1251931");
-            }
-        </script>
-    </div>
+</div>
 </body>
-
 </html>
