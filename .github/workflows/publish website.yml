@@ -13,6 +13,6 @@ jobs:
         FTP_USERNAME: epiz_25055110
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR: htdocs
-        ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --exclude-glob=.yaml**
+        ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --exclude-glob=.yaml** --exclude-glob=.prettierrc**
      
         # --delete arg will delete files on the server if you've deleted them in git
