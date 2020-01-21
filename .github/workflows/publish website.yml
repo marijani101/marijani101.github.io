@@ -12,6 +12,7 @@ jobs:
         FTP_SERVER: ftpupload.net
         FTP_USERNAME: epiz_25055110
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: htdocs
         ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --exclude-glob=.yaml**
      
         # --delete arg will delete files on the server if you've deleted them in git
