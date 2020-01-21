@@ -9,8 +9,8 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: ftp.samkirkland.com
-        FTP_USERNAME: myFtpUserName
+        FTP_SERVER: ${{ secrets.FTP_HOSTNAME }}
+        FTP_USERNAME: ${{ secrets.FTP_PASSWORD }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
