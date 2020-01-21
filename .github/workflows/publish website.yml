@@ -9,8 +9,8 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: ${{ secrets.FTP_HOSTNAME}}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME}}
+        FTP_SERVER: ftpupload.net
+        FTP_USERNAME: epiz_25055110
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --exclude-glob=.yaml**
      
