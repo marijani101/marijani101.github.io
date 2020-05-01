@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eGA VC FAQ</title>
+    <!-- <link href="FAQ_files/css.css" rel="stylesheet"> -->
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        #page {
+            align-items: stretch;
+        }
+
+        a {
+            border: 1px solid rgb(0, 0, 0, .2);
+            border-radius: 6px;
+            color: rgb(80, 80, 80);
+            display: block;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none !important;
+        }
+
+        div, article, h1, h2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            background-color: rgb(242, 245, 247);
+            font-size: 1em;
+        }
+
+        h1,
+        h2 {
+            align-items: center;
+            color: #425d8b;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+            padding: 15px 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid rgb(230, 230, 230);
+            font-size: 1em;
+        }
+
+        article p {
+            color: rgb(80, 80, 80);
+            margin: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        article p[data-expanded] {
+            height: unset;
+            padding: 5px 15px;
+        }
+    </style>
+    <script type="text/javascript">
+        function initArticles() {
+            const articles = document.querySelectorAll(`article`);
+            articles.forEach(article => {
+                article.querySelector('h2').onclick = () => {
+                    article.querySelector('p').toggleAttribute('data-expanded');
+                };
+            });
+        }
+    </script>
+</head>
+
+<body onload="initArticles()">
+    <div id="page">
+        <h1>
+            Suggested for you:
+        </h1>
+        <article>
+            <h2>
+                How does eGA VC work?
+            </h2>
+            <p>
+                Once you installed the app and allowed all permissions to access you can simply enter a room name into
+                the room field and you have just created your first conference. Then once in the meeting, you can open
+                the menu using the 3 dots button at the bottom, then select “Invite others” to share the meeting details
+                with others.
+            </p>
+        </article>
+        <article>
+            <h2>
+                I want to join class/meeting XY
+            </h2>
+            <p>
+                You should reach out to the organizer of that conference and get a room name to join.
+            </p>
+        </article>
+        <article>
+            <h2>
+                Can't activate my camera, or microphone.
+            </h2>
+            <p >
+                It sounds like a permission issue on the device. Can you please double check if you gave all the
+                permissions to the app that it needs? The easiest way is to go to the device settings section of the
+                phone, find the eGA VC application, and turn all permissions on. On Android you may also need to go
+                into "Apps and notifications" after opening Settings.
+            </p>
+        </article>
+        <article>
+            <h2>
+                How do I invite others to my meeting?
+            </h2>
+            <p >
+                Once in the meeting, you can open the menu using the 3 dots button at the bottom, then select “Invite
+                others” to share the meeting details with others.
+            </p>
+        </article>
+        <article>
+            <h2>
+                How do I use eGA VC on Windows/Mac?
+            </h2>
+            <p>
+                eGA VC is mainly a web based app, so on any other desktop operating systems, you can just navigate to
+                https://ridc.egatest.go.tz using a Google Chrome browser and you're good to go - no need to download anything.
+            </p>
+        </article>
+        <article>
+            <h2>
+                What is the password?
+            </h2>
+            <p >
+                If you are prompted with a password when joining a conference, then you should reach out either to other
+                participants in the conference, because they might have locked the conference, or to the IT
+                administrator of your employer/school, because they must have set up a company/school-wide password for
+                ell conferences.
+            </p>
+        </article>
+        <article>
+            <h2>
+                How can I delete a room?
+            </h2>
+            <p>
+                You don’t need to delete a room, as eGA VC meeting rooms get deleted as soon as everyone leaves them. If
+                you want to remove it from your app home screen too, you can just swipe left on the name and it will
+                offer you to delete the entry.
+            </p>
+        </article>
+        <article>
+            <h2>
+                Someone entered my meeting I didn’t know.
+            </h2>
+            <p>
+                Next time you can try using the "Room lock" feature. Using Room lock, you can set a simple password that
+                you share with others in the conference (for the unlikely case they got dropped from the conference), so
+                the only people who know that password can join your conference.
+            </p>
+        </article>
+        <article>
+            <h2>
+                I cannot join the meeting / it randomly disconnects
+            </h2>
+            <p>
+                We occasionaly experience some exceptionally heavy load and intermittent issues may happen. We suggest
+                you try again a bit later, if possible. If the problem persists, please reach out to us via email:
+                <a href="mailto:info@ega.go.tz">info@ega.go.tz</a>
+                <a href="tel:+255-764-292299">+255-764-292299</a>
+                <a href="tel:+255-763-292299">+255-763-292299</a>
+            </p>
+        </article>
+        <article>
+            <h2>
+                I have other problems with the app.
+            </h2>
+            <p>
+                In this case please reach out to us via email or phone: <a href="mailto:info@ega.go.tz">info@ega.go.tz</a>
+                <a href="tel:+255-764-292299">+255-764-292299</a>
+            </p>
+        </article>
+    </div>
+
+
+</body></html>
