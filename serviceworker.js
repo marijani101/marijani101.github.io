@@ -3,16 +3,16 @@
 console.log('WORKER: executing.');
 
 // // ServiceWorker is a progressive technology. Ignore unsupported browsers
-// if ('serviceWorker' in navigator) {
-//     console.log('CLIENT: service worker registration in progress.');
-//     navigator.serviceWorker.register('/serviceworker.js').then(function() {
-//       console.log('CLIENT: service worker registration complete.');
-//     }, function() {
-//       console.log('CLIENT: service worker registration failure.');
-//     });
-//   } else {
-//     console.log('CLIENT: service worker is not supported.');
-//   }
+if ('serviceWorker' in navigator) {
+    console.log('CLIENT: service worker registration in progress.');
+    navigator.serviceWorker.register('/serviceworker.js').then(function() {
+      console.log('CLIENT: service worker registration complete.');
+    }, function() {
+      console.log('CLIENT: service worker registration failure.');
+    });
+  } else {
+    console.log('CLIENT: service worker is not supported.');
+  }
 
 var version = 'v1::';
 
@@ -47,7 +47,7 @@ self.addEventListener("install", function(event) {
 
   self.addEventListener("fetch", function(event) {
     console.log('WORKER: fetch event in progress.');
-  
+
     /* We should only cache GET requests, and deal with the rest of method in the
        client-side, by handling failed POST,PUT,PATCH,etc. requests.
     */
@@ -82,21 +82,21 @@ self.addEventListener("install", function(event) {
             .then(fetchedFromNetwork, unableToResolve)
             // We should catch errors on the fetchedFromNetwork handler as well.
             .catch(unableToResolve);
-  
+
           /* We return the cached response immediately if there is one, and fall
              back to waiting on the network as usual.
           */
           console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
           return cached || networked;
-  
+
           function fetchedFromNetwork(response) {
             /* We copy the response before replying to the network request.
                This is the response that will be stored on the ServiceWorker cache.
             */
             var cacheCopy = response.clone();
-  
+
             console.log('WORKER: fetch response from network.', event.request.url);
-  
+
             caches
               // We open a cache to store the response for this request.
               .open(version + 'pages')
@@ -110,11 +110,11 @@ self.addEventListener("install", function(event) {
               .then(function() {
                 console.log('WORKER: fetch response stored in cache.', event.request.url);
               });
-  
+
             // Return the response so that the promise is settled in fulfillment.
             return response;
           }
-  
+
           /* When this method is called, it means we were unable to produce a response
              from either the cache or the network. This is our opportunity to produce
              a meaningful response even when all else fails. It's the last chance, so
@@ -130,9 +130,9 @@ self.addEventListener("install", function(event) {
                  against a third party, such as an ad provider
                - Generate a Response programmaticaly, as shown below, and return that
             */
-  
+
             console.log('WORKER: fetch request failed in both cache and network.');
-  
+
             /* Here we're creating a response programmatically. The first parameter is the
                response body, and the second one defines the options for the response.
             */
@@ -153,7 +153,7 @@ self.addEventListener("install", function(event) {
        Activation will fail unless the promise is fulfilled.
     */
     console.log('WORKER: activate event in progress.');
-  
+
     event.waitUntil(
       caches
         /* This method returns a promise which will resolve to an array of available
