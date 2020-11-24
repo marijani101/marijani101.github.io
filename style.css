@@ -54,7 +54,7 @@ a::selection {
     background: #000;
     font-family: monospace;
     font-weight: 10;
-    text-shadow: 5px 5px 0 #eb452b, 7px 7px 0 #efa032, 9px 9px 0 #46b59b, 11px 11px 0 #017e7f, 13px 13px 0 #052939
+    text-shadow: 5px 5px 0 #eb452b, 7px 7px 0 #efa032, 9px 9px 0 #46b59b, 11px 11px 0 #017e7f, 13px 13px 0 #052939 ,15px 15px 0 #d0c5e5
 }
 
 .list-notes,
